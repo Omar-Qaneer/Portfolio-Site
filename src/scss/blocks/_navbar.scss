@@ -1,6 +1,7 @@
 @use '../utils/utils.scss' as utils;
 
 .navbar {
+    margin-right: 2rem;
     &__list {
         @include utils.flex(space-between, center, row);
     }
@@ -10,12 +11,13 @@
         margin-right: 1rem;
         color: hsl(0, 0%, 41%);
         list-style: none;
-        padding: 1.2rem 3rem;
+        padding-left: 4rem;
     }
 
     &__item:nth-last-child(1) {
         border: 1px solid gray;
-        padding: 0.4rem 1rem;
+        padding: 0.4rem 2rem;
+        margin-left: 2rem;
         border-radius: 0.3rem;
         background-color: #4932c2; 
         color: white;

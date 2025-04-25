@@ -1,15 +1,16 @@
 @use '../utils/utils.scss' as utils;
 
 .header {
-    position: fixed;
-    z-index: 10;
+    /*position: fixed;
+    /*z-index: 10;*/    
     width: 100%;
     @include utils.flex(space-between, center, row);
-    background-color: utils.$header-background-color;
+    background-color: utils.$primary-color;
 
     &__logo-image {
         height: 40px; 
         width: auto; 
         max-width: 200px;
+        padding-left: 1rem;
     }
 }

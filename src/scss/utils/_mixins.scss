@@ -4,3 +4,25 @@
     align-items: $align;
     flex-direction: $direction;
 }
+
+@mixin text-style($fontSize, $color, $lineHight, $marginBottom) {
+    font-size: $fontSize;
+    color: $color;
+    line-height: $lineHight;
+    margin-bottom: $marginBottom;
+}
+
+@mixin button-style($bg-color, $border-color, $text-color: #fff) {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: 3px solid $border-color;
+    border-radius: 5px;
+    background-color: $bg-color;
+    color: $text-color;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      opacity: 0.9;
+    }
+  }

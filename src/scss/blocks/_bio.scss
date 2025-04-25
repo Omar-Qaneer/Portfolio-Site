@@ -34,10 +34,7 @@
     }
 
     &__content {
-        font-size: 1em;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        color: #555;
+        @include utils.text-style(1em,#555, 1.6, 20px);
     }
 
     &__ctas {

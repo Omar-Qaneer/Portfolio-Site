@@ -1,0 +1,25 @@
+@use '../utils/utils.scss' as utils;
+
+.project-card {
+    border: 1px solid #000;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, .3);
+    width: 400px;
+    height: 700px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: .3s ease all;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 3em;
+
+    &:hover {
+        transform: translateY(-20px);
+    }
+
+    &__content {
+        @include utils.text-style(1em,#555, 1.6, 9px);
+        padding: 1.5em;
+    }
+}

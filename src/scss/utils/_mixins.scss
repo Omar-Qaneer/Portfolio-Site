@@ -15,8 +15,13 @@
 @mixin button-style($bg-color, $border-color, $text-color: #fff) {
     padding: 10px 20px;
     font-size: 1.2em;
-    border: 3px solid $border-color;
-    border-radius: 5px;
+    @if $border-color != null and $border-color != none {
+        border: 3px solid $border-color;
+        border-radius: 5px;
+      } @else {
+        border: none;
+        border-radius: 8px;
+      }
     background-color: $bg-color;
     color: $text-color;
     cursor: pointer;

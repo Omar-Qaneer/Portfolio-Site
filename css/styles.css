@@ -14,8 +14,8 @@
 }
 
 .header {
-  /*position: fixed;
-  /*z-index: 10;*/
+  position: fixed;
+  z-index: 10;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -49,13 +49,6 @@
 
 .navbar {
   margin-right: 2rem;
-  /*display: flex;
-
-  @include utils.respond('small'){
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-  }*/
 }
 @media (max-width: 768px) {
   .navbar {
@@ -153,8 +146,19 @@
     font-size: 0.9em;
   }
 }
+@keyframes slideInFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .bio__headline {
   font-size: 2.8em;
+  animation: slideInFade 0.8s ease-out both;
 }
 @media (max-width: 768px) {
   .bio__headline {

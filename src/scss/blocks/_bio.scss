@@ -40,10 +40,9 @@
         height:100%;
     }
     @include utils.respond('small') {
-        //margin: 0 auto 2em; // center card
     
         &__image-container {
-          max-width: 300px; // smaller circle
+          max-width: 300px; 
         }
     
         &__content {
@@ -52,8 +51,20 @@
         }
       }
 
+      @keyframes slideInFade {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
     &__headline {
         font-size: 2.8em;
+        animation: slideInFade 0.8s ease-out both;
         @include utils.respond('medium'){
             font-size: 1.8em;
         }

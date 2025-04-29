@@ -2,13 +2,6 @@
 
 .navbar {
     margin-right: 2rem;
-    /*display: flex;
-
-    @include utils.respond('small'){
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-    }*/
 
     @include utils.respond('medium'){
         padding: 0.5rem 1rem;

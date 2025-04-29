@@ -4,13 +4,25 @@
     /*position: fixed;
     /*z-index: 10;*/    
     width: 100%;
+    display: flex;
     @include utils.flex(space-between, center, row);
     background-color: utils.$primary-color;
+    @include utils.respond('small'){
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
 
     &__logo-image {
         height: 40px; 
         width: auto; 
         max-width: 200px;
         padding-left: 1rem;
+        @include utils.respond('small'){
+            height: 30px;
+        }
+        @include utils.respond('medium'){
+            height: 35px;
+        }
     }
 }

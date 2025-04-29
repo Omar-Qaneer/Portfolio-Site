@@ -10,6 +10,15 @@
     padding: 1rem 5rem; 
     margin-top: 30px;
 
+    @include utils.respond('medium'){
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        margin-bottom: 550px;
+    }
+    @include utils.respond('small'){
+        text-align: center;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -18,9 +27,11 @@
     &__image-container {
         width: 550px;
         height: 550px;
+        aspect-ratio: 1/1;
         overflow: hidden;
         border-radius: 50%;
         margin-bottom: 2rem;
+        flex-shrink: 0;
     }
 
     &__image {
@@ -28,18 +39,44 @@
         width:100%;
         height:100%;
     }
+    @include utils.respond('small') {
+        //margin: 0 auto 2em; // center card
+    
+        &__image-container {
+          max-width: 300px; // smaller circle
+        }
+    
+        &__content {
+          padding: 1em;
+          font-size: 0.9em;
+        }
+      }
 
     &__headline {
         font-size: 2.8em;
+        @include utils.respond('medium'){
+            font-size: 1.8em;
+        }
+        @include utils.respond('small'){
+            font-size: 1em;
+        }
     }
 
-    &__content {
+    &__description {
         @include utils.text-style(1em,#555, 1.6, 20px);
+        @include utils.respond('small'){
+            font-size: 0.5em;
+        }
     }
 
     &__ctas {
         display: flex;
         gap: 2rem;
+        @include utils.respond('small'){
+            flex-direction: column;
+            font-size: 1rem;
+            padding: 1rem 6rem;
+        }
     }
 
     &__button {

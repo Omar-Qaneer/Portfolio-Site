@@ -22,4 +22,15 @@
         @include utils.text-style(1em,#555, 1.6, 9px);
         padding: 1.5em;
     }
+
+    @include utils.respond('medium') {
+        max-width: 350px;
+        min-height: 450px;
+      }
+    
+      @include utils.respond('small') {
+        max-width: 100%;
+        min-height: 400px;
+        margin-bottom: 2em;
+      }
 }

@@ -1,5 +1,4 @@
 @mixin flex($justify: center, $align: center, $direction: row) {
-    display: flex;
     justify-content: $justify;
     align-items: $align;
     flex-direction: $direction;
@@ -29,5 +28,18 @@
   
     &:hover {
       opacity: 0.9;
+    }
+  }
+
+  @mixin respond($breakpoint) {
+    @if $breakpoint == 'small' {
+      @media (max-width: 480px) {
+        @content;
+      }
+    }
+    @else if $breakpoint == 'medium' {
+      @media (max-width: 768px) {
+        @content;
+      }
     }
   }
